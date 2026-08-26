@@ -1,0 +1,4 @@
+interface:
+  display_name: "DSH Project Harness"
+  short_description: "Initialize and operate an agent-ready project workflow"
+  default_prompt: "Use $dsh-project-harness to initialize this repository with an agent-ready collaboration and change-management workflow."
