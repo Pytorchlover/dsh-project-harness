@@ -22,9 +22,11 @@ Run the narrowest credible checks for the affected behavior. CI owns the exhaust
 
 - Resolve the actual Git root and inspect the worktree before editing. Preserve unrelated and uncommitted user changes.
 - Keep one maintained home for each fact. Standing rules belong here, execution state in `.agents/plans/`, rationale in `.agents/notes/`, and situational procedures in `.agents/skills/`.
-- A non-trivial change updates affected documentation and adds or updates the Agent Note that owns its rationale. Purely mechanical, behavior-preserving edits are exempt.
+- Update affected documentation. Record durable decisions worth revisiting in Agent Notes; routine experiments belong in their experiment report, and small internal fixes can explain rationale in the change.
 - Multi-step, risky, cross-component, or delegated work uses an active change plan with acceptance criteria, owners, dependencies, and validation.
 - Never commit credentials. Treat generated files, migrations, release operations, shared infrastructure, and destructive commands according to their owning instructions.
+
+Confirmed reusable lessons become short rules here or in the owning module documentation; keep incident details in their original report. Do not create a memory hierarchy or full-file index without a concrete need.
 
 ## Collaboration
 

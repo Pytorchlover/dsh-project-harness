@@ -23,3 +23,7 @@ Add or update a note when a change alters behavior, architecture, a shared contr
 Proposed notes contain `Problem`, `Proposal`, `Alternatives considered`, `Acceptance criteria`, and `Risks`. Implemented notes contain `Problem`, `Decision`, `Alternatives considered`, and `Consequences`, written as current shipped state. Record only real alternatives; do not invent ceremony.
 
 A reversal gets a new cross-linked note. Update paths, names, defaults, and mechanisms in an implemented note when the same decision moves; do not append a change log.
+
+## Proportionality
+
+Use a decision note for a durable choice worth revisiting. Parameter sweeps and exploratory runs can share one experiment report; small internal fixes can explain rationale in the change. Do not create a note per commit. Confirmed lessons belong in the owning rules or module docs, with evidence linked; no separate memory hierarchy is required.

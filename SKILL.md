@@ -24,11 +24,13 @@ For the system's layers and boundaries, read [references/harness-architecture.md
 - **Coordinate multiple agents or people:** read [references/collaboration.md](references/collaboration.md). Treat task ownership and write scopes as coordination hints, not filesystem locks.
 - **Review, verify, or hand off work:** read [references/quality-workflow.md](references/quality-workflow.md). Select evidence from the affected surface; do not claim checks that were not run.
 
+- **Simplify or migrate an existing harness:** read [references/lean-maintenance.md](references/lean-maintenance.md). Preserve useful facts and evidence; remove redundant structure.
+
 ## Operating invariants
 
 - One fact has one maintained home; other documents link to it.
 - Standing rules live in `AGENTS.md`; procedures live in skills or development docs; rationale and rejected alternatives live in decision notes; transient execution state lives in plans and handoffs.
-- Non-trivial changes update documentation and add or update the decision record that owns the rationale. Mechanical, behavior-preserving edits do not need ceremonial notes.
+- Update affected documentation when behavior changes; add decision notes for durable choices worth revisiting, not every experiment or internal edit. See the proportionality rules in [references/lean-maintenance.md](references/lean-maintenance.md).
 - The lead agent owns integration: inspect the final diff, reconcile overlaps, run relevant checks, and wait for required delegated work before answering.
 - Parallel work must be partitioned by outcome and file scope. Shared checkout writes remain visible immediately, so Bash, formatters, and generators require explicit coordination.
 - Default initialization never overwrites existing files. Use `--overwrite` only with explicit approval; the script writes backups first.
