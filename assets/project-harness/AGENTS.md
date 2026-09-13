@@ -18,6 +18,14 @@
 
 Run the narrowest credible checks for the affected behavior. CI owns the exhaustive platform and integration matrix unless this repository states otherwise.
 
+## Rules and confirmed failure modes
+
+<!-- TODO: Add project rules as they become confirmed, grouped under short headings that name the owning group. Keep each rule to one to three lines and link the document that owns its detail. Delete generic reminders an agent already knows. -->
+
+Confirmed reusable lessons become short rules here or in the owning module documentation; keep incident details in their original report.
+
+<!-- TODO: When a failure class recurs across components and would be costly to rediscover, add one entry per class — symptom, rule, evidence link — or move the list to docs/failure-modes.md and link that file in one line. Order entries by defect class, never by date. Delete this placeholder while the list is empty. Do not create a memory hierarchy or full-file index without a concrete need. -->
+
 ## Change workflow
 
 - Resolve the actual Git root and inspect the worktree before editing. Preserve unrelated and uncommitted user changes.
@@ -25,8 +33,6 @@ Run the narrowest credible checks for the affected behavior. CI owns the exhaust
 - Update affected documentation. Record durable decisions worth revisiting in Agent Notes; routine experiments belong in their experiment report, and small internal fixes can explain rationale in the change.
 - Multi-step, risky, cross-component, or delegated work uses an active change plan with acceptance criteria, owners, dependencies, and validation.
 - Never commit credentials. Treat generated files, migrations, release operations, shared infrastructure, and destructive commands according to their owning instructions.
-
-Confirmed reusable lessons become short rules here or in the owning module documentation; keep incident details in their original report. Do not create a memory hierarchy or full-file index without a concrete need.
 
 ## Collaboration
 
@@ -40,3 +46,7 @@ The lead agent owns decomposition, final integration, the final diff, and verifi
 - The final diff contains no unintended files, secrets, stale generated output, or unresolved placeholders.
 
 Use [.agents/skills/project-code-review/SKILL.md](.agents/skills/project-code-review/SKILL.md) for reviews and [.agents/skills/project-pre-push-checks/SKILL.md](.agents/skills/project-pre-push-checks/SKILL.md) before claiming a branch is ready to push or review.
+
+## Editing these instructions
+
+Keep this file to rules an agent needs in almost every session, grouped under short headings. Put procedures in [docs/development.md](docs/development.md) or project-local skills, durable rationale in [.agents/notes/](.agents/notes/README.md), current execution state in [.agents/plans/](.agents/plans/README.md), and subtree-only constraints in a nested `AGENTS.md`. Retire or rewrite a rule that no longer matches the repository instead of annotating it as deprecated.

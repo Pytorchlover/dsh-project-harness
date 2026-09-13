@@ -18,6 +18,7 @@ An `AGENTS.md` file helps, but it is not a complete development system. Agent-he
 This skill connects those pieces while keeping them separate enough to stay maintainable:
 
 - Root and subtree `AGENTS.md` files for standing instructions.
+- Confirmed lessons and recurring failure classes promoted into rules with evidence links.
 - Architecture and development docs for current-state facts.
 - Agent Notes for decisions, rejected alternatives, and consequences.
 - Change plans and handoffs for work that is still moving.
@@ -103,13 +104,15 @@ Backups are written under `.agents/harness-backups/<timestamp>/` and ignored by 
 
 The skill uses five cooperating layers:
 
-1. **Standing instructions** — compact root rules plus only the nested rules that genuinely differ.
+1. **Standing instructions** — compact root rules, confirmed lessons promoted from incidents, plus only the nested rules that genuinely differ.
 2. **Current-state documentation** — one maintained home for architecture, development, package, and user facts.
 3. **Decision records** — durable motivation, decisions, real rejected alternatives, and consequences.
 4. **Workflow skills** — review, pre-push, documentation, release, or other procedures loaded only when relevant.
 5. **Executable evidence** — focused local checks for the affected surface, with exhaustive matrices owned by CI.
 
 Team coordination overlays these layers. The lead partitions work into independently useful outcomes, records dependencies and advisory write scopes, waits for required work, reviews the combined diff, and owns final integration.
+
+Confirmed lessons are promoted into short rules in the owning `AGENTS.md` or module document. A failure class that recurs across components gets one defect-class document linked from the root file, ordered by defect class and never by date, while incident narrative stays in the report that owns it.
 
 See [the harness architecture](references/harness-architecture.md) for the ownership map and the DSH-specific rules that are intentionally not copied.
 
@@ -129,6 +132,10 @@ Use $dsh-project-harness to create a change plan, decision note, and teammate wo
 
 ```text
 Use $dsh-project-harness to review whether this branch has the right documentation and validation evidence.
+```
+
+```text
+Use $dsh-project-harness to turn this repository's incident reports into confirmed rules and one failure-mode document.
 ```
 
 ## Repository structure
@@ -185,8 +192,9 @@ Licensed under the [MIT License](LICENSE).
 Keep the default architecture/development split; add specialized contracts or
 experiment reports only when useful. No mandatory memory hierarchy, full-file
 index, timestamp headers or decision note per experiment. Confirmed lessons go
-into the owning rules, while incident evidence stays in its report. See
-[maintenance and migration](references/lean-maintenance.md).
+into the owning rules, while incident evidence stays in its report; a recurring
+cross-component failure class gets one defect-class document linked from the root
+file. See [maintenance and migration](references/lean-maintenance.md).
 
 Check affected Markdown links with:
 
@@ -202,5 +210,6 @@ Markdown; pass paths for untracked new files.
 Run behavioral regression checks with `python3 -m unittest discover -s tests -v`.
 
 中文：默认不增加 memory、全量索引或日期维护体系。已确认的经验写入适用的
-AGENTS.md 或模块说明，过程与证据留在实验报告；普通调参不要求逐项写决策。
+AGENTS.md 或模块说明，过程与证据留在实验报告；跨组件复发的失败类别集中为一个
+按缺陷类别组织的规则文档，由根 AGENTS.md 一行链接。普通调参不要求逐项写决策。
 已有文档通过梳理、合并和链接修复迁移，不用覆盖式初始化。

@@ -4,7 +4,7 @@ This skill adapts the repository-development system observed in DeepSeek Harness
 
 ## Five layers
 
-1. **Standing instructions:** root `AGENTS.md` contains rules needed in almost every task. Nested `AGENTS.md` files add only subtree-specific constraints.
+1. **Standing instructions:** root `AGENTS.md` contains rules needed in almost every task, including lessons promoted from confirmed incidents. Nested `AGENTS.md` files add only subtree-specific constraints.
 2. **Current-state documentation:** architecture, development, subsystem, package, and user documents each own a distinct type of fact.
 3. **Decision records:** Agent Notes retain motivation, the selected decision, real rejected alternatives, consequences, and verification obligations.
 4. **Workflow skills:** review, pre-push, release, documentation, or other situational procedures load only when needed.
@@ -25,6 +25,7 @@ Team coordination overlays these layers. A lead partitions work, teammates own b
 | Current implementation checklist | `.agents/plans/active/...` |
 | Reusable situational procedure | `.agents/skills/<workflow>/SKILL.md` |
 | Incident chronology and evidence | Postmortem/incident document |
+| Recurring failure classes stated as rules | Defect-class failure-mode document linked from root `AGENTS.md` |
 | Review result or teammate transfer | Handoff document or task message |
 
 Do not duplicate the same rule across tiers. Put a short link at the point of use.
