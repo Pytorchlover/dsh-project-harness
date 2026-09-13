@@ -15,7 +15,7 @@ Update the plan as work changes. On completion, summarize the delivered outcome 
 
 ## Decision note
 
-Add or update `.agents/notes/<lifecycle>/<class>/yyyy-mm-dd-topic.md` when a change alters behavior, architecture, a shared contract, process/tooling, testing strategy, persistent data, wire/config formats, or another decision likely to be revisited.
+Add or update `.agents/notes/<lifecycle>/<class>/yyyy-mm-dd-topic.md` for durable choices likely to be revisited, such as a new default, architecture, shared contract, process, testing strategy or persistent format. A change touching these areas does not automatically require a separate note; use the proportionality guidance below.
 
 Lifecycle:
 
@@ -30,3 +30,7 @@ Every note includes the problem, proposal/decision, genuine alternatives conside
 ## Handoff
 
 Use a handoff when another agent or person must continue unfinished work. Include exact state, changed files, commands run and results, remaining work, blockers, risky assumptions, and next safe action. Never describe an interrupted command as completed.
+
+## Proportionality
+
+Use a decision note for a durable choice worth revisiting. Parameter sweeps and exploratory runs can share one experiment report; small internal fixes can explain rationale in the change. Do not create a note per commit. Confirmed lessons belong in the owning rules or module docs, with evidence linked; no separate memory hierarchy is required.

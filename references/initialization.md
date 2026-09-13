@@ -36,3 +36,5 @@ For an existing mature repository, prefer a gap audit and focused additions. A n
 - Decision-note and execution-plan lifecycles are understandable without this skill.
 - Local review and pre-push skills discover commands from the repository and do not claim a universal suite.
 - A second default initializer run creates nothing and changes nothing.
+
+For consolidation of an existing documentation system, follow [lean-maintenance.md](lean-maintenance.md); initialization is not a migration engine. Check affected links with `scripts/check_docs.py`, then verify commands and facts manually.

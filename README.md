@@ -179,3 +179,28 @@ Licensed under the [MIT License](LICENSE).
 `dsh-project-harness` 用于把新仓库或现有仓库整理成适合 Agent 协作开发的项目：包含分层 `AGENTS.md`、架构与开发文档、Agent Note 决策记录、执行计划、团队任务划分、代码审查和按影响面选择的质量检查。
 
 初始化默认不会覆盖已有文件；对成熟项目，推荐直接让 Codex 调用该 skill，先检查现有规范，再只补齐缺失部分。
+
+## Lean maintenance and migration
+
+Keep the default architecture/development split; add specialized contracts or
+experiment reports only when useful. No mandatory memory hierarchy, full-file
+index, timestamp headers or decision note per experiment. Confirmed lessons go
+into the owning rules, while incident evidence stays in its report. See
+[maintenance and migration](references/lean-maintenance.md).
+
+Check affected Markdown links with:
+
+```sh
+python3 scripts/check_docs.py /path/to/repository docs AGENTS.md
+```
+
+The checker validates local link destinations, including project-specific source
+directories. It does not prove prose freshness, symbols, anchors or command
+correctness. Without explicit paths it checks tracked root/docs/notes/plans
+Markdown; pass paths for untracked new files.
+
+Run behavioral regression checks with `python3 -m unittest discover -s tests -v`.
+
+中文：默认不增加 memory、全量索引或日期维护体系。已确认的经验写入适用的
+AGENTS.md 或模块说明，过程与证据留在实验报告；普通调参不要求逐项写决策。
+已有文档通过梳理、合并和链接修复迁移，不用覆盖式初始化。
