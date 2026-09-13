@@ -19,7 +19,7 @@ For the system's layers and boundaries, read [references/harness-architecture.md
 ## Choose the operation
 
 - **Initialize a new or lightly documented repository:** read [references/initialization.md](references/initialization.md), run `scripts/init_project_harness.py`, then tailor every generated command and rule against the real project.
-- **Write or revise `AGENTS.md`:** read [references/agents-md.md](references/agents-md.md). Keep root instructions short and durable; put subtree-only rules in nested files.
+- **Write or revise `AGENTS.md`:** read [references/agents-md.md](references/agents-md.md). Keep root instructions short and durable, grouped under named rule headings; put subtree-only rules in nested files and promote confirmed lessons into rules.
 - **Plan or document a project change:** read [references/change-docs.md](references/change-docs.md). Keep execution state separate from durable rationale.
 - **Coordinate multiple agents or people:** read [references/collaboration.md](references/collaboration.md). Treat task ownership and write scopes as coordination hints, not filesystem locks.
 - **Review, verify, or hand off work:** read [references/quality-workflow.md](references/quality-workflow.md). Select evidence from the affected surface; do not claim checks that were not run.
@@ -30,6 +30,7 @@ For the system's layers and boundaries, read [references/harness-architecture.md
 
 - One fact has one maintained home; other documents link to it.
 - Standing rules live in `AGENTS.md`; procedures live in skills or development docs; rationale and rejected alternatives live in decision notes; transient execution state lives in plans and handoffs.
+- Confirmed lessons become short rules with evidence links. A failure class that recurs across components gets one defect-class document, ordered by class rather than by date, while incident narrative stays in the report that owns it.
 - Update affected documentation when behavior changes; add decision notes for durable choices worth revisiting, not every experiment or internal edit. See the proportionality rules in [references/lean-maintenance.md](references/lean-maintenance.md).
 - The lead agent owns integration: inspect the final diff, reconcile overlaps, run relevant checks, and wait for required delegated work before answering.
 - Parallel work must be partitioned by outcome and file scope. Shared checkout writes remain visible immediately, so Bash, formatters, and generators require explicit coordination.

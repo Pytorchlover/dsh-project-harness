@@ -33,4 +33,4 @@ Use a handoff when another agent or person must continue unfinished work. Includ
 
 ## Proportionality
 
-Use a decision note for a durable choice worth revisiting. Parameter sweeps and exploratory runs can share one experiment report; small internal fixes can explain rationale in the change. Do not create a note per commit. Confirmed lessons belong in the owning rules or module docs, with evidence linked; no separate memory hierarchy is required.
+Use a decision note for a durable choice worth revisiting. Parameter sweeps and exploratory runs can share one experiment report; small internal fixes can explain rationale in the change. Do not create a note per commit. Confirmed lessons belong in the owning rules or module docs, with evidence linked; recurring cross-module failure classes belong in the project's defect-class failure-mode document. No separate memory hierarchy is required.

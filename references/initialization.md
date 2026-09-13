@@ -34,6 +34,7 @@ For an existing mature repository, prefer a gap audit and focused additions. A n
 - Root instructions name the actual project, layout, commands, safety boundaries, and definition of done.
 - Architecture and development docs link to sources of truth instead of copying inventories.
 - Decision-note and execution-plan lifecycles are understandable without this skill.
+- Confirmed lessons have a stated home: rules in `AGENTS.md` or module docs, one defect-class failure-mode document only once a class is confirmed, and incident narrative in the report that owns it.
 - Local review and pre-push skills discover commands from the repository and do not claim a universal suite.
 - A second default initializer run creates nothing and changes nothing.
 

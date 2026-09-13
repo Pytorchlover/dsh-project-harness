@@ -11,6 +11,10 @@ there is no mandatory full-file index, timestamp header or code inventory.
 - Put a confirmed, broadly applicable lesson into AGENTS.md as a short actionable
   rule. Module-specific lessons belong in the owning module documentation or
   scoped AGENTS.md. Link to evidence instead of copying incident history.
+- When the same failure class recurs across modules, keep one defect-class document
+  of rules — symptom, rule, evidence link — and link it from the root AGENTS.md in
+  a single line. Order it by defect class, never by date, and create it with the
+  first confirmed class rather than as an empty scaffold.
 - Keep a one-off incident, unsuccessful experiment or uncertain hypothesis in its
   experiment report or active plan. Recurrence alone does not prove a general rule.
 - Do not create a separate memory taxonomy by default. Add a searchable knowledge
@@ -24,8 +28,8 @@ there is no mandatory full-file index, timestamp header or code inventory.
 
 ## Migrating an existing harness
 
-1. Inspect current rules, facts, plans, experiments and local skills; identify the
-   maintained home of each fact before moving anything.
+1. Inspect current rules, facts, plans, experiments, failure-mode or incident lists
+   and local skills; identify the maintained home of each fact before moving anything.
 2. Preserve operating constraints, active state and historical evidence. Merge
    short overlapping guides; retire empty categories and redundant indexes.
 3. Move useful records with their links updated. Do not silently delete unresolved
